@@ -2,6 +2,10 @@
 
 This project is made by Flutter and handle state with Getx and Api calling with Dio.
 
+Thanks to : 
+https://pub.dev/packages/get
+https://pub.dev/packages/dio
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
