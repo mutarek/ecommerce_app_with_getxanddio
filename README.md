@@ -1,6 +1,6 @@
 # api_calling_get
 
-A new Flutter project.
+This project is made by Flutter and handle state with Getx and Api calling with Dio.
 
 ## Getting Started
 
