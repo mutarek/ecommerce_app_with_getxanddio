@@ -79,7 +79,7 @@ class MyHomePage extends GetView<HomeController> {
                                   Row(
                                     children: [
                                       ...List.generate(
-                                        4,
+                                        3,
                                         (index) => const Icon(
                                           Icons.star_border_rounded,
                                           color: Color(0xFF9B9B9B),
