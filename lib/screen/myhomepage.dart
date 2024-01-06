@@ -91,7 +91,7 @@ class MyHomePage extends GetView<HomeController> {
                                     height: constraints.maxHeight * 0.02,
                                   ),
                                   Text(
-                                    data.brand ?? "",
+                                    data.brand ?? "Brand Name",
                                     maxLines: 1,
                                     style: const TextStyle(
                                       fontSize: 11,
