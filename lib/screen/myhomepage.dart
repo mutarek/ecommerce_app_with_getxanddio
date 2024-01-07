@@ -1,4 +1,5 @@
 import 'package:api_calling_get/controller/home_controller.dart';
+import 'package:api_calling_get/screen/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../model/product_model.dart';
@@ -37,6 +38,11 @@ class MyHomePage extends GetView<HomeController> {
                         child: LayoutBuilder(
                           builder: (_, constraints) {
                             return InkWell(
+                              onTap: () {
+                                controller.getProductDetails(
+                                    data.id.toString() ?? "");
+                                Get.to(() => ProductDetailsScreen());
+                              },
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

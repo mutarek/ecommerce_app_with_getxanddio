@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import '../network/dio_exceptions.dart';
 
 class HomeRepository {
-  Future<ProductModel> getCustomerSupplierList() async {
+  Future<ProductModel> getProductsList() async {
     try {
       Response response = await DioClient()
           .dio
@@ -22,6 +22,24 @@ class HomeRepository {
         print(errorMessage);
       }
       return ProductModel();
+    }
+  }
+
+  Future<SingleProduct> getSingleProducts(String id) async {
+    try {
+      Response response = await DioClient()
+          .dio
+          .get("${AppConstant.baseUrl}${AppConstant.productsUrl}/$id");
+      return SingleProduct.fromJson(response.data);
+    } catch (e) {
+      var errorMessage = e.toString();
+      if (e is DioException) {
+        errorMessage = DioExceptions.fromDioError(e).toString();
+      }
+      if (kDebugMode) {
+        print(errorMessage);
+      }
+      return SingleProduct();
     }
   }
 }
