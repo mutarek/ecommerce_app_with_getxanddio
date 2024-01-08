@@ -10,7 +10,7 @@ class ProductDetailsScreen extends GetView<HomeController> {
     Get.lazyPut(() => HomeController());
     return Obx(() => Scaffold(
         appBar: AppBar(
-          title: Text("Single Product Details"),
+          title: Text("Single Product Detail"),
         ),
         body: controller.isSingleLoading.value
             ? Center(
